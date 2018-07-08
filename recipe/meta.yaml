@@ -9,23 +9,24 @@ source:
   sha256: 065a6374e343b7dbb66d9d26992bbed4bdc0669f7dd744129fe109dbf214fd77
 
 build:
-  number: 0
+  noarch: python
+  number: 1
   preserve_egg_dir: True
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  script: python -m pip install --no-deps --ignore-installed .
   entry_points:
     - long_description_markdown_filename = setuptools_markdown:long_description_markdown_filename
 
 requirements:
-  build:
+  host:
     - python
-    - setuptools
+    - pip
   run:
     - python
     - setuptools
     - pypandoc
 
 test:
-  import:
+  imports:
     - setuptools_markdown
 
 about:
