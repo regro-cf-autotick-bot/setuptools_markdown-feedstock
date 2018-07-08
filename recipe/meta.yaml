@@ -18,16 +18,15 @@ build:
 
 requirements:
   host:
-    - pip
     - python
-    - setuptools
+    - pip
   run:
     - python
     - setuptools
     - pypandoc
 
 test:
-  import:
+  imports:
     - setuptools_markdown
 
 about:
