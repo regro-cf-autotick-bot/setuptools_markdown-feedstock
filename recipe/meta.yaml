@@ -1,4 +1,4 @@
-{% set version = "0.2" %}
+{% set version = "0.3" %}
 
 package:
   name: setuptools_markdown
@@ -6,11 +6,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/s/setuptools-markdown/setuptools-markdown-{{ version }}.tar.gz
-  sha256: 065a6374e343b7dbb66d9d26992bbed4bdc0669f7dd744129fe109dbf214fd77
+  sha256: 89612f5cd790b7fcb25c15df25d6487c3cb2ff169a7b322012e747bb3de30d84
 
 build:
   noarch: python
-  number: 1
+  number: 0
   preserve_egg_dir: True
   script: python -m pip install --no-deps --ignore-installed .
   entry_points:
